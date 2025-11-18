@@ -15,7 +15,7 @@ dependencyResolutionManagement {
 }
 
 rootProject.name = "kotlin-ipfs-car"
-include(":library",":sample-compose-app")
+include(":library")
 if (System.getenv("JITPACK") == null) {
-    include(":sample-app")
+    include(":sample-compose-app")
 }
