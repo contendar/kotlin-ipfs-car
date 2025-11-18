@@ -49,9 +49,9 @@ afterEvaluate {
         publications {
             create<MavenPublication>("release") {
                 from(components["release"])
-                groupId = "io.github.contendar"
+                groupId = "com.github.contendar"
                 artifactId = "kotlin-ipfs-car"
-                version = "0.1.0"
+                version = "v1.0.0"
             }
         }
         repositories {
