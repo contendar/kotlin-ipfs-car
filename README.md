@@ -16,26 +16,27 @@ Includes a sample Jetpack Compose app demonstrating **file picker → CAR → St
 
 In **settings.gradle.kts**:
 
-dependencyResolutionManagement {
+`dependencyResolutionManagement {
     repositories {
         mavenCentral()
         maven("https://jitpack.io")
-    }
-}
+  }
+}`
 
 In **app/build.gradle.kts**:
-dependencies {
-    implementation("com.github.contendar:kotlin-ipfs-car:1.0.0")
-}
+
+`dependencies {
+ implementation("com.github.contendar:kotlin-ipfs-car:v1.0.1")
+}`
 
 ## Usage (CAR + CID + Storacha Upload)
-val carResult = CarBuilder.createCarFromInputStream(
+`val carResult = CarBuilder.createCarFromInputStream(
     fileName = "example.png",
     input = contentResolver.openInputStream(uri)!!
-)
+)`
 
-println("CAR CID: ${carResult.cid}")
-println("CAR size: ${carResult.sizeBytes}")
+`println("CAR CID: ${carResult.cid}")`
+`println("CAR size: ${carResult.sizeBytes}")`
 
 // Storacha step 1: create upload intent
 val intent = StorachaUtils.createUploadIntent(
